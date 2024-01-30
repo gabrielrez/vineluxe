@@ -6,6 +6,7 @@
 
 body {
   background-color: #F7F7F7;
+
 }
 
 ul,
@@ -58,6 +59,11 @@ a {
   font-size: 1.25rem;
 }
 
+.nav-menu li a:hover {
+  color: #862F36;
+  font-weight: 500;
+}
+
 .main-container {
   max-width: 1200px;
   margin-left: auto;
@@ -87,9 +93,150 @@ a {
   background-color: #862F36;
 }
 
+.about-container {
+  margin-top: 120px;
+}
+
+.about-title {
+  font-size: 2rem;
+}
+
+.about-title span {
+  font-weight: 500;
+}
+
+.about-text {
+  margin-top: 20px;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.about-text span {
+  text-decoration: underline;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+
+.shop-container {
+  margin-top: 120px;
+}
+
+.shop-title {
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.shop-title::before {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: #862F36;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -40px;
+}
+
+.shop-title span {
+  font-weight: 500;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.item {
+  max-width: 400px;
+}
+
+.item-info {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.item-info-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-info-title h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item-info-title h3:before {
+  content: "";
+  width: 2px;
+  height: 24px;
+  background-color: #862F36;
+  transition: 0.2s;
+}
+
+.item:hover .item-info-title h3:before {
+  width: 24px;
+  height: 2px;
+}
+
+.item-info-title h3,
+.item-info-title span {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.item-info-text {
+  margin-top: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media(max-width: 1000px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media(max-width:800px) {
+  .container {
+    padding: 0 10px;
+  }
+
   .main-title {
     font-size: 3.5rem;
+  }
+
+  .about-container,
+  .shop-container,
+  .shop-container {
+    margin-top: 80px;
+  }
+
+  .about-title,
+  .shop-title {
+    font-size: 1.5rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -105,6 +252,17 @@ a {
   .main-img {
     margin-top: 40px;
     row-gap: 40px;
+  }
+}
+
+@media(max-width: 500px) {
+  .shop-grid {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .item {
+    justify-self: center;
   }
 }
 
