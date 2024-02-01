@@ -60,6 +60,10 @@ a {
   color: #232324;
 }
 
+.c2 {
+  color: #F7F7F7;
+}
+
 .playfair-display {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
@@ -147,7 +151,8 @@ a {
 }
 
 .shop-container,
-.faq-container {
+.faq-container,
+footer {
   margin-top: 120px;
 }
 
@@ -258,6 +263,51 @@ a {
   }
 }
 
+footer {
+  background-color: #862F36;
+}
+
+.footer-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: 3fr 5fr 4fr;
+  gap: 40px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.footer-container h3 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.footer-container p {
+  grid-column: 1/-1;
+  margin-top: 32px;
+}
+
+.footer-container li {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.social-medias {
+  display: flex;
+  gap: 32px;
+}
+
+.social-medias img {
+  width: 24px;
+  margin-top: 16px;
+}
+
 @media(max-width: 1000px) {
   .about-grid {
     grid-template-columns: 1fr 1fr;
@@ -276,7 +326,8 @@ a {
   .about-container,
   .shop-container,
   .shop-container,
-  .faq-container {
+  .faq-container,
+  footer {
     margin-top: 80px;
   }
 
@@ -296,6 +347,16 @@ a {
 
   .shop-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .footer-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -379,6 +440,10 @@ a {
   .faq-questions dt {
     font-family: 'Montserrat';
     font-size: 1rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
   }
 }
 
