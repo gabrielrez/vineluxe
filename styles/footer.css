@@ -1,0 +1,44 @@
+footer {
+  background-color: #862F36;
+}
+
+.footer-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: 3fr 5fr 4fr;
+  gap: 40px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.footer-container h3 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.footer-container p {
+  grid-column: 1/-1;
+  margin-top: 32px;
+}
+
+.footer-container li {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.social-medias {
+  display: flex;
+  gap: 32px;
+}
+
+.social-medias img {
+  width: 24px;
+  margin-top: 16px;
+}

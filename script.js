@@ -9,6 +9,8 @@ const imgsArray = [
   "img/main-img-2.jpg",
   "img/main-img-3.jpg"
 ];
+const dataAnimes = document.querySelectorAll("[data-anime]");
+const windowHalf = window.innerHeight * 0.9;
 
 function initMenuMobile() {
   function handleClickOutside(event) {
@@ -72,6 +74,26 @@ function initMainImgChange() {
   changeImage();
 }
 
+function initAnimeScroll() {
+  for (let i = 0; i < 2; i++) {
+    dataAnimes[i].classList.add("animate");
+  }
+
+  if (dataAnimes) {
+    function animeScroll() {
+      dataAnimes.forEach((item) => {
+        const itemTop = item.getBoundingClientRect().top - windowHalf;
+        if (itemTop < 0) {
+          item.classList.add("animate");
+        }
+      })
+    }
+  }
+
+  window.addEventListener("scroll", animeScroll);
+}
+
 initMenuMobile();
 initAccordion();
 initMainImgChange();
+initAnimeScroll();

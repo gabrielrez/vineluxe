@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F7F7F7;
+
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
+}
+
+.shop-container,
+.faq-container,
+footer {
+  margin-top: 120px;
+}
+
+.shop-title,
+.faq-title {
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.shop-title::before,
+.faq-title::before {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: #862F36;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -40px;
+}
+
+.c0 {
+  color: #862F36;
+}
+
+.c1 {
+  color: #232324;
+}
+
+.c2 {
+  color: #F7F7F7;
+}
+
+.playfair-display {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+}

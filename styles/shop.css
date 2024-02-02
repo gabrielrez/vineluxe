@@ -1,0 +1,56 @@
+.shop-title span {
+  font-weight: 500;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.item {
+  max-width: 400px;
+}
+
+.item-info {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.item-info-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-info-title h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item-info-title h3:before {
+  content: "";
+  width: 2px;
+  height: 24px;
+  background-color: #862F36;
+  transition: 0.2s;
+}
+
+.item:hover .item-info-title h3:before {
+  width: 24px;
+  height: 2px;
+}
+
+.item-info-title h3,
+.item-info-title span {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.item-info-text {
+  margin-top: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+}

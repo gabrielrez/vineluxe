@@ -1,0 +1,27 @@
+.about-container {
+  margin-top: 120px;
+}
+
+.about-title {
+  font-size: 2rem;
+}
+
+.about-title span {
+  font-weight: 500;
+}
+
+.about-text {
+  margin-top: 20px;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.about-text span {
+  text-decoration: underline;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
