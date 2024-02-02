@@ -3,6 +3,12 @@ const listMobile = document.querySelector("[data-menu='list']");
 const html = document.documentElement;
 const linksMenu = document.querySelectorAll("[data-menu='list'] li a");
 const accordion = document.querySelectorAll("[data-accordion='dt']");
+const mainImg = document.querySelector(".main-img img");
+const imgsArray = [
+  "img/main-img-1.jpg",
+  "img/main-img-2.jpg",
+  "img/main-img-3.jpg"
+];
 
 function initMenuMobile() {
   function handleClickOutside(event) {
@@ -49,5 +55,23 @@ function initAccordion() {
   })
 }
 
+function initMainImgChange() {
+  let i = 0;
+
+  function changeImage() {
+    mainImg.setAttribute("src", imgsArray[i]);
+    i++;
+
+    if (i === imgsArray.length) {
+      i = 0;
+    }
+
+    setTimeout(changeImage, 5000);
+  }
+
+  changeImage();
+}
+
 initMenuMobile();
 initAccordion();
+initMainImgChange();
