@@ -93,7 +93,9 @@ function initAnimeScroll() {
   window.addEventListener("scroll", animeScroll);
 }
 
-initMenuMobile();
-initAccordion();
-initMainImgChange();
-initAnimeScroll();
+window.onload = function () {
+  initMenuMobile();
+  initAccordion();
+  initMainImgChange();
+  initAnimeScroll();
+}
