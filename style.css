@@ -5,6 +5,52 @@
 @import url(styles/faq.css);
 @import url(styles/footer.css);
 
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-container {
+  background-color: #F7F7F7;
+  padding: 32px;
+  border-radius: 4px;
+  animation: show-modal 0.5s;
+}
+
+@keyframes show-modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.modal-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.modal-container ul a {
+  font-size: 1.125rem;
+}
+
 [data-anime] {
   opacity: 0;
   transition: 1s;

@@ -11,6 +11,8 @@ const imgsArray = [
 ];
 const dataAnimes = document.querySelectorAll("[data-anime]");
 const windowHalf = window.innerHeight * 0.9;
+const linksModal = document.querySelectorAll("[data-modal='link']");
+const modal = document.querySelector("[data-modal='modal']");
 
 function initMenuMobile() {
   function handleClickOutside(event) {
@@ -93,9 +95,28 @@ function initAnimeScroll() {
   window.addEventListener("scroll", animeScroll);
 }
 
+function initModal() {
+  function closeModal(event) {
+    if (event.target == modal) {
+      modal.classList.remove("active");
+    }
+  }
+
+  function openModal(event) {
+    event.preventDefault();
+    modal.classList.add("active");
+    modal.addEventListener("click", closeModal);
+  }
+
+  linksModal.forEach((item) => {
+    item.addEventListener("click", openModal);
+  })
+}
+
 window.onload = function () {
   initMenuMobile();
   initAccordion();
   initMainImgChange();
   initAnimeScroll();
+  initModal();
 }
